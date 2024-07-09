@@ -1,0 +1,309 @@
+/* 顶部内容 */
+body{
+    background-color: #fbfbfb;
+}
+.header {
+    position: relative;
+    height: 80px;
+    margin: 50px auto;
+    width: 1200px;
+}
+/* logo */
+.header .logo {
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto -50px auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, .07);
+    padding: 10px;
+    background-color: #fff;
+    z-index: 1;
+    position: relative;
+}
+
+.header .logo img {
+    position: absolute;
+    left: 5px;
+    top: 25px;
+    width: 90%;
+    height: 43%;
+}
+/*
+.header .literal ul li{
+    float: right;
+    font-size: 17px;
+    color: #262b3a;
+}
+.header .literal a {
+    padding:0 15px;
+    line-height: 80px;
+}
+.header .literal a:hover {
+    color: #bfbfbf;
+}*/
+
+/*.header .literal .one::after {
+    content: '';
+    position: absolute;
+    top: 13px;
+    right: 38px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/sprites_90.png);
+    background-position: 126px -71px;
+}*/
+/* 语言 */
+/*.header .literal dl {
+    position: absolute;
+    top: 70px;
+    right: 1px;
+    display: none;
+    width: 100px;
+    background-color: #f9f9f9;
+    z-index: 3;
+}
+.header .literal li dl a {
+    float: left;
+    width: 100px;
+    line-height: 50px;
+}
+.header .literal .one:hover .two{
+    display: block;
+}*/
+
+/* body */
+.body {
+    /*background-image: url(../images/car1.jpg);
+    background-size: 31%;
+    background-repeat: no-repeat;
+    background-position: 220px 100px;*/
+    height: 100%;
+    width: 900px;
+    margin: 0 auto;
+}
+.body .right{
+    background-color: #ffffff;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, .08);
+    float: right;
+    width: 450px;
+    height: 547px;
+    background-image: url("../images/car.png");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: 20px 50px;
+}
+/*.body .literal {
+    float: left;
+    padding: 50px 0 0 80px;
+}*/
+/*.body .literal h3 {
+    font-size: 50px;
+    color: #262b3a;
+    font-style: italic;
+    font-family: STLiti;
+}*/
+/*.body .literal span {
+    padding-left: 180px;
+    font-size: 25px;
+    color: #d8302e;
+    font-family: FZYaoti;
+}*/
+
+/* 登录 */
+/*.body .login-frame {
+    position: relative;
+    float: right;
+    margin-right: 140px;
+    margin-top: 40px;
+    width: 450px;
+    height: 500px;
+    border: 2px solid #e7ecf2;
+    border-radius: 8px;
+}*/
+.body .login-frame {
+    background-color: #fff;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, .08);
+    padding: 20px 25px 25px 25px;
+    text-align: left;
+    border-radius: 3px;
+    width: 450px;
+}
+.body .login-frame .title{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color:#0081c6;
+    font-size:18px;
+    text-align: center;
+}
+.body .login-frame p {
+    margin-bottom: 5px;
+    display: inline-block;
+    width: 100%;
+}
+.body .login-frame p a {
+    float: right;
+    margin-right: 25px;
+}
+.body .login-frame .top {
+    position: relative;
+    height: 75px;
+    line-height: 75px;
+    font-size: 17px;
+    box-shadow: 0px 2px 0px 0px rgb(118 118 118 / 20%);
+}
+.body .login-frame .top a:first-child {
+    display: inline-block;
+    height: 75px;
+    padding-left: 75px;
+    padding-right: 65px;
+}
+.body .login-frame .top span {
+    position: absolute;
+    top: 24px;
+    width: 1px;
+    height: 28px;
+    background-color: #dfe1e6;
+}
+.body .login-frame .top a:last-child {
+    padding-left: 68px;
+    padding-right: 0px;
+    display: inline-block;
+    height: 75px;
+}
+.body .login-frame .top .current {
+    border-bottom: 3px solid #0081c6;
+}
+
+.body .login-frame .userName {
+    margin-left: 25px;
+    margin-bottom: 26px;
+    height: 62px;
+}
+.body .login-frame .userName input {
+    padding: 0 20px;
+    width: 350px;
+    height: 50px;
+    border-radius: 1em;
+    background-color:rgba(0, 129, 198, .05);
+    color:  #0081c6;
+}
+.body .login-frame .userName input:hover {
+    border: 2px solid #edc79d;
+}
+
+.body .login-frame .password {
+    margin-left: 25px;
+    margin-top: 50px;
+    margin-bottom: 26px;
+    width: 100%;
+    height: 62px;
+}
+.body .login-frame .password input {
+    padding: 0 20px;
+    width: 350px;
+    height: 50px;
+    border-radius: 1em;
+    background-color:rgba(0, 129, 198, .05);
+    color:#0081c6;
+}
+.body .login-frame .password input:hover {
+    border: 2px solid #edc79d;
+}
+.body .login-frame .password a,
+.body .login-frame .forget a {
+    color: #0081c6;
+    text-decoration: none;
+    border-bottom: 1px dashed #8dc7e6;
+    margin-top: -3px;
+    padding-bottom: 2px;
+}
+.body .login-frame .submit {
+    margin: 60px 0px 0px 25px;
+    width: 440px;
+    height: 62px;
+}
+.body .login-frame .submit input {
+    padding: 0 20px;
+    width: 350px;
+    height: 50px;
+    background-color: #0081c6;
+    border-radius: 1em;
+    border: 1px solid #ccc;
+    color:#fff;
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: 0 2px 7px  #0081c6;
+}
+/*.body .login-frame .submit input {
+    color: #fff;
+    font-size: 16px;
+}*/
+
+.body .login-frame .forget {
+    text-align: center;
+    padding: 10px;
+    font-weight: 700;
+    margin-top: 20px;
+    color: #8dc7e6;
+}
+/*.body .login-frame .forget li:first-child a {
+    padding-right: 16px;
+    border-right: 1px solid red;
+}*/
+.body .login-frame #check1,
+.body .login-frame #check2 {
+    position: absolute;
+    left: 210px;
+    width: 270px;
+    height: 23px;
+    font-size: 14px;
+    color: #d8302e;
+}
+/*.body .login-frame #check1  {
+    top: 224px;
+}
+.body .login-frame #check2 {
+    top: 312px;
+}*/
+
+
+
+/* footer */
+.footer {
+    height: 60px;
+    background-color: #fff;
+    box-shadow: 0px 2px 3px 0px rgb(118 118 118 / 20%) inset;
+
+}
+/* 右侧 */
+/*.footer ul li {
+    float: left;
+    margin: auto;
+    height: 20px;
+}
+.footer ul li a {
+    padding: 0 15px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #262b3a;
+    border-right: 1px solid #832b3a;
+}*/
+.footer .links{
+    margin: auto;
+    height: 20px;
+    text-align: center;
+}
+
+.footer .links a{
+    font-size: 12px;
+    line-height: 20px;
+    margin:0 10px;
+}
+/* 左侧 */
+.footer .left {
+    font-size: 12px;
+    color: #262b3a;
+    list-style: none;
+    text-align: center;
+}

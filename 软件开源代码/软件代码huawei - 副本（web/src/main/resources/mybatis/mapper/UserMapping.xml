@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.time.haisi_demo.mapper.UserMapping">
+
+    <select id="loginQueryUser" resultType="com.time.haisi_demo.bean.User">
+        select * from haisi_demo.users where username = #{userName}
+        <choose>
+            <when test="tel == null">
+                and password = #{password}
+            </when>
+            <otherwise>
+                or tel = #{tel}
+            </otherwise>
+        </choose>
+    </select>
+
+    <insert id="registerUser" parameterType="com.time.haisi_demo.bean.User">
+        insert into haisi_demo.users(username, password, tel) values (#{userName}, #{password}, #{tel})
+    </insert>
+
+</mapper>

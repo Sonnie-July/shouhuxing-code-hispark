@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/login_index.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="stylesheet" href="css/car_position.css">
+    <script src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=PWFvkDrag6OVw5e4DfxMV5tOOjJdM87e"></script>
+</head>
+<body>
+<!-- 顶部导航 -->
+<div class="head">
+    <div class="logo">
+
+    </div>
+    <ul>
+        <li class="lagu">
+            <a href="#">简体中文</a>
+            <div class="language">
+                <a href="#" class="one">简体中文</a>
+                <a href="#" class="two">English</a>
+                <a href="#" class="two">Japanese</a>
+            </div>
+        </li>
+        <li><a href="#">消息</a></li>
+        <li><a href="#">支持与服务</a></li>
+        <li><a href="#">企业</a></li>
+        <li><a href="#">费用</a></li>
+    </ul>
+    <div class="user">
+        <img src="images/touxiang.jpg" alt="">
+    </div>
+
+    </div>
+    <!-- 左侧导航 -->
+    <div class="left">
+        <ul>
+            <li>
+                <span class="iconfont icon-shouye"></span>
+                <a th:href="@{toLogin_IndexPage}">产品概况</a>
+            </li>
+            <li class="choice">
+                <span class="iconfont icon-dingwei"></span>
+                <a th:href="@{toCar_PositionPage}">车辆位置</a>
+            </li>
+            <li>
+                <span class="iconfont icon-xingji"></span>
+                <a th:href="@{toCar_DynamicPage}">车辆动态</a>
+            </li>
+            <li>
+                <span class="iconfont icon-yuer"></span>
+                <a th:href="@{toBabyPage}">宝贝动态</a>
+            </li>
+            <li>
+                <span class="iconfont icon-anquan"></span>
+                <a th:href="@{toSafePage}" class="securate">安全中心</a>
+                <!-- 之后再加上 -->
+                <!-- <div class="secura-frame">
+                    <a href="#">管理员列表</a>
+                    <a href="#">用户列表</a>
+                </div> -->
+            </li>
+            <li>
+                <span class="iconfont icon-dangan"></span>
+                <a th:href="@{toCondiserPage}">帮助文档</a>
+            </li>
+            <li>
+                <span class="iconfont icon-bianji"></span>
+                <a th:href="@{toFeedbackPage}">问题反馈</a>
+            </li>
+        </ul>
+    </div>
+    <div class="info">最新版GL地图命名空间为BMapGL, 可按住鼠标右键控制地图旋转、修改倾斜角度。</div>
+    <div id="container"></div>
+</body>
+    <script>
+        var map = new BMapGL.Map('container',{showControls: true}); // 创建Map实例  并添加室内图控件
+        map.centerAndZoom(new BMapGL.Point(113.514348853, 34.8179851299),17); // 初始化地图,设置中心点坐标和地图级别
+        map.enableScrollWheelZoom(true); // 开启鼠标滚轮缩放
+        var marker1 = new BMapGL.Marker(new BMapGL.Point(113.514348853, 34.8179851299));
+        map.addOverlay(marker1);
+    </script>
+</html>

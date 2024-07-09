@@ -1,0 +1,90 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.banner {
+    width: 600px;
+    margin: auto;
+    border: 10px solid #83ceee;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    top: 60px;
+    left: 100px;
+}
+
+.imgList {
+    list-style: none;
+    /* width: 2480px; */
+    position: absolute;
+    /* left:-620px; */
+}
+
+.imgList img {
+    width: 600px;
+    height: 350px;
+}
+
+
+
+.imgList li {
+    float: left;
+    margin-right: 20px;
+}
+
+.circle {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circle a {
+    width: 15px;
+    height: 15px;
+    background: #d6f1f8;
+    display: block;
+    border-radius: 50%;
+    opacity: .5;
+    float: left;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.circle a.hover {
+    background: black;
+    opacity: .8;
+}
+
+.image-container {
+    width: 33%; /* 每个块的宽度 */
+    float: left; /* 使块水平排列 */
+    transition: filter 1s; /* 设置过渡效果的时间 */
+}
+
+.normal-brightness {
+    filter: brightness(1); /* 正常亮度 */
+}
+
+.dimmed {
+    filter: brightness(0.5); /* 半暗状态 */
+}
+
+.all-image-container{
+    width: 1200px;
+    margin: auto;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    top: 120px;
+    left: 180px;
+}
+
+.icon-baby{
+    margin-top: 20px;
+    margin-left: 40px;
+    height: 50px;
+    width: 115px;
+}
+

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/login_index.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <script src="echars/echarts.min.js"></script>
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <div class="head">
+        <div class="logo">
+
+        </div>
+        <ul>
+            <li class="lagu">
+                <a href="#">简体中文</a>
+                <div class="language">
+                    <a href="#" class="one">简体中文</a>
+                    <a href="#" class="two">English</a>
+                    <a href="#" class="two">Japanese</a>
+                </div>
+            </li>
+            <li><a href="#">消息</a></li>
+            <li><a href="#">支持与服务</a></li>
+            <li><a href="#">企业</a></li>
+            <li><a href="#">费用</a></li>
+        </ul>
+        <div class="user">
+            <img src="images/touxiang.jpg" alt="">
+        </div>
+       
+    </div>
+    <!-- 左侧导航 -->
+    <div class="left">
+        <ul>
+            <li class="choice">
+                <span class="iconfont icon-shouye"></span>
+                <a th:href="@{toLogin_IndexPage}">产品概况</a>
+            </li>
+            <li>
+                <span class="iconfont icon-dingwei"></span>
+                <a th:href="@{toCar_PositionPage}">车辆位置</a>
+            </li>
+            <li>
+                <span class="iconfont icon-xingji"></span>
+                <a th:href="@{toCar_DynamicPage}">车辆动态</a>
+            </li>
+            <li>
+                <span class="iconfont icon-yuer"></span>
+                <a th:href="@{toBabyPage}">宝贝动态</a>
+            </li>
+            <li>
+                <span class="iconfont icon-anquan"></span>
+                <a th:href="@{toSafePage}" class="securate">安全中心</a>
+                <!-- 之后再加上 -->
+                <!-- <div class="secura-frame">
+                    <a href="#">管理员列表</a>
+                    <a href="#">用户列表</a>
+                </div> -->
+            </li>
+            <li>
+                <span class="iconfont icon-dangan"></span>
+                <a th:href="@{toCondiserPage}">帮助文档</a>
+            </li>
+            <li>
+                <span class="iconfont icon-bianji"></span>
+                <a th:href="@{toFeedbackPage}">问题反馈</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="body">
+        <h2 class="title">智护星</h2>
+        <span></span>
+        <!--<div class="chara_one">
+            <span >安全</span>
+        </div>
+        <div class="chara_two">
+            <span>智能</span>
+        </div>
+        <div class="chara_three">
+            <span>舒适</span>
+        </div>-->
+        <!-- 图表一 -->
+        <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+        <div id="chart-one"></div>
+        <h2 class="sp-one">产品获利概况</h2>
+
+        <!-- 图表二 -->
+        <div id="chart-two"></div>
+        <h2 class="sp-two">用户满意度</h2>
+
+        <!-- 图表三 -->
+        <div id="chart-three"></div>
+        <h2 class="sp-three">产品销售概况</h2>
+
+        <!-- 图表四 -->
+        <div id="chart-four"></div>
+        <h2 class="sp-four">产品访问情况</h2>
+
+        <!-- 图表五 -->
+        <div id="chart-five"></div>
+        <h2 class="sp-five">产品特性</h2>
+    </div>
+
+
+
+    <script type="text/javascript">
+        var myChart_one = echarts.init(document.getElementById('chart-one'));
+        var myChart_two = echarts.init(document.getElementById('chart-two'));
+        var myChart_three = echarts.init(document.getElementById('chart-three'));
+        var myChart_four = echarts.init(document.getElementById('chart-four'));
+        var myChart_five = echarts.init(document.getElementById('chart-five'));
+        var option_one;
+        var option_two;
+        var option_three;
+        var option_four;
+        var option_five;
+        option_one = {
+            xAxis: {
+                type: 'category',
+                data: ['23-01', '23-02', '23-03', '23-04', '23-05', '23-06', '23-07']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    data: [475, 420, 338, 470, 356, 230, 500],
+                    itemStyle:{
+                        color:'#41a5c7',
+                        barBorderRadius: 5,
+                        },
+                    type: 'bar',
+                    barWidth: '50%'
+                }
+            ]
+        };
+
+        option_two = {
+            legend: {
+                top: 'bottom',
+            },
+            series: [
+                {
+                    type: 'pie',
+                    radius: ['50%', '75%'],
+                    avoidLabelOverlap: false,
+                    label: {
+                        show: false,
+                        position: 'center'
+                    },
+                    labelLine: {
+                        show: false
+                    },
+                    emphasis: {
+                        label: {
+                            show: true,
+                            fontSize: '30',
+                            fontWeight: 'bold'
+                        }
+                    },
+                    data: [
+                        { value: 90, name: '好评',itemStyle: {color:'#41a5c7'}},
+                        { value: 5, name: '中评' ,itemStyle: {color:'#98877c'}},
+                        { value: 2, name: '待改进',itemStyle: {color:'#f06b6e'}},
+                    ]
+                }
+            ]
+        };
+        option_three = {
+            legend: {
+                top: 'bottom'
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    mark: { show: true },
+                    dataView: { show: true, readOnly: false },
+                    restore: { show: true },
+                    saveAsImage: { show: true }
+                }
+            },
+            series: [
+                {
+                    name: 'Nightingale Chart',
+                    type: 'pie',
+                    radius: [20, '70%'],
+                    center: ['50%', '50%'],
+                    roseType: 'area',
+                    data: [
+                        { value: 40, name: '一月' },
+                        { value: 38, name: '二月' },
+                        { value: 30, name: '三月' },
+                        { value: 35, name: '四月' },
+                        { value: 31, name: '五月' },
+                        { value: 25, name: '六月' },
+                        { value: 42, name: '七月' ,itemStyle: {color:'#98877c'}},
+                    ]
+                }
+            ]
+        };
+        option_four = {
+            xAxis: {
+                type: 'category',
+                data: ['23-01', '23-02', '23-03', '23-04', '23-05', '23-06', '23-07']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    data: [1520, 2000, 1780, 2800, 2580, 2840, 3300],
+                    itemStyle:{
+                        color:'#41a5c7',
+                    },
+                    type: 'line'
+                }
+            ]
+        };
+        option_five = {
+            legend: {
+                data: ['us', 'others'],
+                top: 'bottom'
+            },
+            radar: {
+                // shape: 'circle',
+                indicator: [
+                    { name: 'safe', max: 10000 },
+                    { name: 'comfort', max: 10000 },
+                    { name: 'intelligence', max: 10000 },
+                ]
+            },
+            series: [
+                {
+                    name: 'us vs others',
+                    type: 'radar',
+                    data: [
+                        {
+                            value: [9200, 9000, 9000],
+
+                            name: 'us'
+                        },
+                        {
+                            value: [7000, 8000, 7500],
+                            name: 'others'
+                        }
+                    ]
+                }
+            ]
+        };
+        option_one && myChart_one.setOption(option_one);
+        option_two && myChart_two.setOption(option_two);
+        option_three && myChart_three.setOption(option_three);
+        option_four && myChart_four.setOption(option_four);
+        option_five && myChart_five.setOption(option_five);
+    </script>
+
+</body>
+</html>

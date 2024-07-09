@@ -1,0 +1,119 @@
+/* 顶部导航 */
+
+.nav {
+    position: absolute;
+    z-index: 1;
+    left:130px;
+    top:10px;
+    height: 110px;
+    width: 1150px;
+}
+.nav .top {
+    padding: 0 75px;
+    height: 30px;
+    background-color: #111;
+}
+.nav .top .two,
+.nav .top .one {
+    position: relative;
+    float: right;
+    margin-left: 35px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 30px;
+}
+.nav .top .one::before {
+    position: absolute;
+    top: 5px;
+    left: -18px;
+    content: '';
+    width: 15px;
+    height: 20px;
+    background-image: url(../images/sprites.png);
+    background-position: -158px -68px
+    ;
+}
+.logo {
+    float: left;
+    height: 70px;
+    width: 140px;
+    margin-left: 20px;
+}
+.logo img {
+    height: 60px;
+    width: 130px;
+}
+.nav .header {
+    float: left;
+    height: 70px;
+}
+.nav .header ul li {
+    float: left;
+}
+.nav .header ul li a {
+    display: inline-block;
+    margin: 0 20px;
+    height: 80px;
+    font-size: 18px;
+    line-height: 80px;
+}
+.nav .header ul li a:hover {
+    border-bottom: 3px solid red;
+}
+/* 搜索框 */
+/*.nav .search {
+    position: relative;
+    float: left;
+    margin-left: 100px;
+    margin-top: 20px;
+    width: 350px;
+    height: 40px;
+    border: 1px solid #abd0b8;
+}
+.nav .search input {
+    margin-left: 10px;
+    width: 338px;
+    height: 38px;
+    border: 0;
+}
+.nav .search span {
+    position: absolute;
+    content: '';
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/sprites.png);
+    background-position: -78px -69px;
+}*/
+/* 最右侧导航 */
+.nav .last ul li {
+    float: right;
+}
+.nav .last ul li a {
+    float: right;
+    margin-left: 30px;
+    display: inline-block;
+    height: 80px;
+    line-height: 80px;
+    font-size: 18px;
+}
+.nav .last ul li a:hover {
+    border-bottom: 3px solid red;
+}
+.nav .last ul li:first-child {
+    padding-top: 26px;
+}
+.nav .last ul li:first-child a {
+    display: inline-block;
+    height: 27px;
+    width: 40px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #c50511;
+    border-bottom: 0;
+}
+.nav .last ul li:first-child a:hover {
+    background-color: #b0b0b0;
+}

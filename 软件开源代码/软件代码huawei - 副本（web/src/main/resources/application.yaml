@@ -1,0 +1,30 @@
+server:
+  port: 9999
+
+spring:
+  datasource: # 配置数据源
+    #url: jdbc:mysql://192.168.200.110:3306/haisi_demo
+    #url: jdbc:mysql://47.97.170.94:3306/haisi_demo
+    #url: jdbc:mysql://49.233.245.182:3306/haisi_demo
+    url: jdbc:mysql://localhost:3306/haisi_demo
+    username: root
+    #password: dUG0mqCc!yekItu%J
+    password: 20041018le
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#  mail:
+#    host: smtp.163.com
+#    username: forleverdm@163.com
+#    password: AIHGOUVVSZFUHCJK
+#  redis:
+#    host: 192.168.6.128
+
+#    url: jdbc:mysql://localhost:3306/haisi_demo
+#    username: root
+#    password: root
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+# 配置Mybatis规则
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml    # 全局配置文件位置
+  mapper-locations: classpath:mybatis/mapper/*.xml         # SQL映射文件位置

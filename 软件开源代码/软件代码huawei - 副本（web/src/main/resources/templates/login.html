@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <!-- 顶部内容 -->
+    <div class="header">
+        <!-- logo图 -->
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+        <!--<div class="literal">
+            <ul>
+                <li class="one">
+                    <a href="#">简体中文</a>
+                    <dl class="two">
+                        <dd><a href="#">简体中文</a></dd>
+                        <dd><a href="#">English</a></dd>
+                        <dd><a href="#">Janpaese</a></dd>
+                    </dl> 
+                </li>
+                <li><a href="#">云社区</a></li>
+                <li><a href="#">文档</a></li>
+            </ul>
+        </div>
+    </div>-->
+
+    <!-- body -->
+    <div class="body">
+        <!-- 登录 -->
+        <div class="right"></div>
+        <div class="login-frame">
+            <div class="top">
+                <a href="#"><p>扫码登录</p></a>
+                <span></span>
+                <a href="#"><p class="current">密码登录</p></a>
+            </div>
+            <p class="title">账号密码登录</p>
+            <div class="userName">
+                <p>用户名</p>
+                <input type="text" name="userName" id="username">
+            </div>
+            <div id="check1"></div>
+            <div class="password">
+                <p>密码<a href="#" class="forgot-link">忘记密码？</a></p>
+                <input type="password" name="password" id="password">
+            </div>
+            <div id="check2"></div>
+            <div class="submit">
+                <input type="submit" value="登 录" id="btn">
+            </div>
+
+            <div class="forget">
+                还没有账号？<a th:href="@{toRegisterPage}">注册</a>
+            </div>
+
+        </div>
+    </div>
+
+    
+
+    <!-- footer 底部 -->
+    <!--<div class="footer">
+        <div class="links">
+            <a href="#">隐私政策声明</a>
+             |
+            <a href="#">法律声明</a>
+             |
+            <a href="#">关于我们</a>
+             |
+            <a href="#">Cookies</a>
+        </div>-->
+        <!--<ul>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">隐私政策声明</a></li>
+            <li><a href="#">法律声明</a></li>
+            <li><a href="#">关于我们</a></li>
+        </ul>-->
+        <!-- 左侧 -->
+        <!--<div class="left">
+            <a href="#">暂ICP备20220617号-17 郑A2-20490162号  贵公网安备 41258901503675号</a>
+            <p>©2022 ZZULIJT525.com 版权所有</p>
+        </div>-->
+
+        <!-- 右侧 -->
+        <!--<ul>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">隐私政策声明</a></li>
+            <li><a href="#">法律声明</a></li>
+            <li><a href="#">关于我们</a></li>
+        </ul>-->
+    </div>
+</body>
+
+<script src="js/logAJax.js"></script>
+<script src="js/logCheck.js"></script>
+
+</html>

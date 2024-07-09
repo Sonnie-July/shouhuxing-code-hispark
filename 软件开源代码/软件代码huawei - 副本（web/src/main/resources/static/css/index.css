@@ -1,0 +1,114 @@
+/* 底部 */
+.footer {
+    height: 300px;
+    width: 100%;
+    background-color: pink;
+}
+.footer .top {
+    padding: 0 120px;
+    height: 125px;
+    background-color: #f6f5f7;
+}
+.footer .top ul li a {
+    float: left;
+    position: relative;
+    height: 125px;
+    width: 300px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 125px;
+    text-align: center;
+}
+.footer .top ul li a:hover {
+    background-color: #fff;
+}
+.footer .top ul li span {
+    position: absolute;
+    top: 35px;
+    left: 55px;
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/photo1.png);
+    background-size: contain;
+}
+.footer .top ul li:nth-child(4) span {
+    background-image: url(../images/photo2.png);
+    background-size: contain;
+}
+.footer .top ul li:nth-child(2) span {
+    background-image: url(../images/photo3.png);
+    background-size: contain;
+}
+.footer .top ul li:nth-child(3) span {
+    background-image: url(../images/photo4.png);
+    background-size: contain;
+}
+.footer .bottom {
+    padding: 58px 100px;
+    height: 175px;
+    background-color: #cf322a;
+}
+.footer .bottom a {
+    float: left;
+    margin-right: 20px;
+    margin-left: 22px;
+    width: 170px;
+    height: 50px;
+    line-height: 45px;
+    text-align: center;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 30px;
+}
+.footer .bottom a:hover {
+    background-color: #cad1d7;
+    color: red;
+}
+/*.footer .bottom ul li:nth-child(3) a {
+    margin-right: 146px;
+}*/
+/* 躯干 */
+.body {
+    position: relative;
+    height: 650px;
+    background-color: #F3C6BD;
+}
+.body img {
+    position: absolute;
+    top: 150px;
+    right: 20px;
+    height: 430px;
+    width: 700px;
+}
+.body .literal {
+    position: absolute;
+    top:180px;
+    left:130px;
+    width: 600px;
+    height: 545px;
+
+}
+.body .literal h2 {
+    font-size: 65px;
+    margin-bottom: 50px;
+    font-family:STZhongsong;
+}
+.body .literal a {
+    position: absolute;
+    top: 300px;
+    width: 160px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    background-color: #c50511;
+
+}
+.body .literal a:hover {
+    background-color: #b0b0b0;
+}
+.body .literal p {
+    font-size: 30px;
+    font-family:STZhongsong ;
+}

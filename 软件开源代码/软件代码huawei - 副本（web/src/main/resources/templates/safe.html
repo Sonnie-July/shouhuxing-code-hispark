@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/login_index.css">
+    <link rel="stylesheet" href="css/safe.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <div class="head">
+        <div class="logo">
+
+        </div>
+        <ul>
+            <li class="lagu">
+                <a href="#">简体中文</a>
+                <div class="language">
+                    <a href="#" class="one">简体中文</a>
+                    <a href="#" class="two">English</a>
+                    <a href="#" class="two">Japanese</a>
+                </div>
+            </li>
+            <li><a href="#">消息</a></li>
+            <li><a href="#">支持与服务</a></li>
+            <li><a href="#">企业</a></li>
+            <li><a href="#">费用</a></li>
+        </ul>
+        <div class="user">
+            <img src="images/touxiang.jpg" alt="">
+        </div>
+
+    </div>
+    <!-- 左侧导航 -->
+    <div class="left">
+        <ul>
+            <li>
+                <span class="iconfont icon-shouye"></span>
+                <a th:href="@{toLogin_IndexPage}">产品概况</a>
+            </li>
+            <li>
+                <span class="iconfont icon-dingwei"></span>
+                <a th:href="@{toCar_PositionPage}">车辆位置</a>
+            </li>
+            <li>
+                <span class="iconfont icon-xingji"></span>
+                <a th:href="@{toCar_DynamicPage}">车辆动态</a>
+            </li>
+            <li>
+                <span class="iconfont icon-yuer"></span>
+                <a th:href="@{toBabyPage}">宝贝动态</a>
+            </li>
+            <li class="choice">
+                <span class="iconfont icon-anquan"></span>
+                <a th:href="@{toSafePage}" class="securate">安全中心</a>
+                <!-- 之后再加上 -->
+                <!-- <div class="secura-frame">
+                    <a href="#">管理员列表</a>
+                    <a href="#">用户列表</a>
+                </div> -->
+            </li>
+            <li>
+                <span class="iconfont icon-dangan"></span>
+                <a th:href="@{toCondiserPage}">帮助文档</a>
+            </li>
+            <li>
+                <span class="iconfont icon-bianji"></span>
+                <a th:href="@{toFeedbackPage}">问题反馈</a>
+            </li>
+        </ul>
+    </div>
+    <div class="body">
+        <div class="change">
+            <div class="top">
+            <span>修改密码</span>
+            </div>
+            <div class="pass">
+                <input type="text" placeholder="输入密码" id="password">
+            </div>
+            <div class="pass">
+                <input type="text" placeholder="确认密码" id="password">
+            </div>
+            <div class="submit">
+                <input type="submit" value="确认" id="btn">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

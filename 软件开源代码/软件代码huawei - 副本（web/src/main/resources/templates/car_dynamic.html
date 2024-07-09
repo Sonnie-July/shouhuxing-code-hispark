@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/login_index.css">
+    <link rel="stylesheet" href="css/car_dynamic.css">
+    <link rel="stylesheet" href="css/switch.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <script src="jquery/jquery-3.5.1.js"></script>
+</head>
+
+<body>
+    <!-- 顶部导航 -->
+    <div class="head">
+        <div class="logo"></div>
+        <ul>
+            <li class="lagu">
+                <a href="#">简体中文</a>
+                <div class="language">
+                    <a href="#" class="one">简体中文</a>
+                    <a href="#" class="two">English</a>
+                    <a href="#" class="two">Japanese</a>
+                </div>
+            </li>
+            <li><a href="#">消息</a></li>
+            <li><a href="#">支持与服务</a></li>
+            <li><a href="#">企业</a></li>
+            <li><a href="#">费用</a></li>
+        </ul>
+        <div class="user">
+            <img src="images/touxiang.jpg" alt="">
+        </div>
+
+    </div>
+    <!-- 左侧导航 -->
+    <div class="left">
+        <ul>
+            <li>
+                <span class="iconfont icon-shouye"></span>
+                <a th:href="@{toLogin_IndexPage}">产品概况</a>
+            </li>
+            <li>
+                <span class="iconfont icon-dingwei"></span>
+                <a th:href="@{toCar_PositionPage}">车辆位置</a>
+            </li>
+            <li class="choice">
+                <span class="iconfont icon-xingji"></span>
+                <a th:href="@{toCar_DynamicPage}">车辆动态</a>
+            </li>
+            <li>
+                <span class="iconfont icon-yuer"></span>
+                <a th:href="@{toBabyPage}">宝贝动态</a>
+            </li>
+            <li>
+                <span class="iconfont icon-anquan"></span>
+                <a th:href="@{toSafePage}" class="securate">安全中心</a>
+                <!-- 之后再加上 -->
+                <!-- <div class="secura-frame">
+                    <a href="#">管理员列表</a>
+                    <a href="#">用户列表</a>
+                </div> -->
+            </li>
+            <li>
+                <span class="iconfont icon-dangan"></span>
+                <a th:href="@{toCondiserPage}">帮助文档</a>
+            </li>
+            <li>
+            <span class="iconfont icon-bianji"></span>
+            <a th:href="@{toFeedbackPage}">问题反馈</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="body">
+        <h2>智护星</h2>
+        <!-- 设备信息 -->
+        <div class="message">
+            <dl>
+                <dt>设备编号</dt>
+                <dd>54262182301</dd>
+            </dl>
+            <dl>
+                <dt>出厂日期</dt>
+                <dd>2024/02/16</dd>
+            </dl>
+            <dl>
+                <dt>节点类型</dt>
+                <dd>设备</dd>
+            </dl>
+            <dl>
+                <dt>ProductKey</dt>
+                <dd>gmmcTpg3Dwy</dd>
+            </dl>
+            <dl>
+                <dt>生产地址</dt>
+                <dd>/</dd>
+            </dl>
+            <dl>
+                <dt>IP地址</dt>
+                <dd>49.233.245.182</dd>
+            </dl>
+        </div>
+
+        <!-- 传感器监测信息 -->
+        <div class="information">
+            <ul>
+                <!--                    <li>-->
+                <!--                        <h3>电池电量</h3>-->
+                <!--                        <span id="power">100%</span>-->
+                <!--                        <p class="myDate">2022/6/19 17:46:32 812</p>-->
+                <!--                        <a href="#">查看数据</a>-->
+                <!--                    </li>-->
+                <!--                        <li>-->
+                <!--                                                        <h3>电池电量</h3>-->
+                <!--                                                        <span id="beep">100%</span>-->
+                <!--                                                        <p class="myDate">2022/6/19 17:46:32 812</p>-->
+                <!--                                                        <a href="#">查看数据</a>-->
+                <!--                                                    </li>-->
+                <div class="date">
+                    <li>
+                        <p class="iconfont icon-wendu1"></p>
+                        <h3>温度 /℃</h3>
+                        <span id="temperature">20</span>
+                        <p class="myDate">2022/6/19 17:46:32 812</p>
+                        <a href="#">查看数据</a>
+                    </li>
+                    <li>
+                        <p class="iconfont icon-shidu"></p>
+                        <h3>湿度 /%RH</h3>
+                        <span id="humidity1">10</span>
+                        <p class="myDate">2022/6/19 17:46:32 812</p>
+                        <a href="#">查看数据</a>
+                    </li>
+
+                    <li>
+                        <p class="iconfont icon-muyingleitubiao_yingerchuang-copy"></p>
+                        <h3>床垫湿度 /%RH</h3>
+                        <span id="humidity2">13</span>
+                        <p class="myDate">2022/7/06 17:47:16 351</p>
+                        <a href="#">查看数据</a>
+                    </li>
+                </div>
+                <div class="date">
+                    <li>
+                        <p class="iconfont icon-guangzhaoqiangdu"></p>
+                        <h3>光照强度 /Lux</h3>
+                        <span id="lightNow">11037.76</span>
+                        <p class="myDate">2022/7/06 17:47:16 351</p>
+                        <a href="#">查看数据</a>
+                    </li>
+                    <li>
+                        <p class="iconfont icon-renyuan"></p>
+                        <h3>人员是否靠近</h3>
+                        <span id="near">否</span>
+                        <p class="myDate">2022/7/06 17:47:16 351</p>
+                        <a href="#">查看数据</a>
+                    </li>
+
+                    <li>
+                        <p class="iconfont icon-zheyangpeng"></p>
+                        <h3>遮阳棚状态</h3>
+                        <span id="zheyang">关闭</span>
+                        <p class="myDate">2022/7/06 17:47:16 351</p>
+                        <a href="#">查看数据</a>
+                    </li>
+                </div>
+                <div class="date_right">
+                    <li>
+                        <p class="iconfont icon-yingerpiaozhichi"></p>
+                        <h3>婴儿表情状态</h3>
+                        <span id="emoji">无</span>
+                        <p class="myDate">2022/7/06 17:47:16 351</p>
+                        <a href="#">查看数据</a>
+                    </li>
+
+                    <li>
+                        <p class="iconfont icon-niaochuangjianceyi"></p>
+                        <h3>是否尿床</h3>
+                        <span id="bedWetting">否</span>
+                        <p class="myDate">2022/7/06 17:47:16 351</p>
+                        <a href="#">查看数据</a>
+                    </li>
+
+                    <li>
+                        <h3>实时更新</h3>
+                        <span id="whether_update">否</span>
+
+                        <!--  滑动开关-->
+                        <span id="switch" class="update_switch">
+                            <input type="checkbox" id="a">
+                            <label for="a" class="lab_switch"></label>
+                        </span>
+
+                        <p class="myDate">2022/7/06 17:47:16 351</p>
+                        <!-- <a href="#">查看数据</a> -->
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+</body>
+<script>
+    var id = 1
+    var flag = true
+    var setTime
+    //var power = document.querySelector("#power")
+    //var beep = document.querySelector("#beep")
+    var temperature = document.querySelector("#temperature")
+    var humidity1 = document.querySelector("#humidity1")
+    var humidity2 = document.querySelector("#humidity2")
+    var lightNow = document.querySelector("#lightNow")
+    var near = document.querySelector("#near")
+    var securityNow = document.querySelector("#securityNow")
+    var emoji = document.querySelector("#emoji")
+    var zheyang = document.querySelector("#zheyang")
+    var bedWetting = document.querySelector("#bedWetting")
+    var whether_update = document.querySelector("#whether_update")
+    var myDate = document.getElementsByClassName("myDate")
+
+    $('.lab_switch').on('click', function (e) {
+        if (flag === false) {
+            clearInterval(setTime)  // 清除定时器
+            flag = true
+            // console.log("sigh当前的值为： " + flag)
+            whether_update.innerHTML = '否'
+            return
+        }
+        if (flag === true) {
+            flag = false
+            // console.log('flag的值为： ' + flag)
+            // 设置一个定时器，用于数据的实时刷新
+            setTime = setInterval(function () {
+                $.ajax({
+                    type: 'GET',
+                    //url: 'http://localhost:9999/CarData_Flash?id='+id,
+                    //url: 'http://49.233.245.182:9999/document_flush',
+                    url: 'http://localhost:9999/document_flush',
+                    //url: 'http://192.168.113.40:9999/document_flush',
+                    //url: 'http://192.168.6.128:9999//document_flush',
+                    async: false,   // 将Ajax的请求设置为同步请求，防止同时发送两次请求
+                    success: function (res) {
+                        //power.innerHTML = res.power + '%'
+                        //beep.innerHTML = res.beep + '%'
+                        // temperature.innerHTML = res.temperature + '℃'
+                        // humidity1.innerHTML =res.humidity1 + '%RH'
+                        // humidity2.innerHTML = res.humidity2 + '%RH'
+                        // lightNow.innerHTML = res.lightNow + 'Lux'
+                        // near.innerHTML = res.near
+                        // securityNow.innerHTML = res.securityNow
+                        // bedWetting.innerHTML = res.bedWetting
+                        temperature.innerHTML = res.temperature// + '℃'
+                        humidity1.innerHTML = res.humidity //+ '%RH'
+                        humidity2.innerHTML = res.bedWetting //+ '%RH'
+                        lightNow.innerHTML = res.illumination //+ 'Lux'
+                        // near.innerHTML = res.kanJin
+                        near.innerHTML = res.renti
+
+                        //securityNow.innerHTML = 2
+                        //bedWetting.innerHTML = res.niaChung
+                        bedWetting.innerHTML = res.niaChung
+                        emoji.innerHTML = res.emoji
+                        zheyang.innerHTML = res.zheyang
+                        whether_update.innerHTML = '是'
+                        // 将当前时间插入到各个数据表格中
+                        for (var i = 0; i < myDate.length; i++) {
+                            myDate[i].innerHTML = setDate()
+                        }
+                    }
+                })
+                if (id >= 21) {
+                    id = 0
+                }
+                id++
+            }, 1000)
+        }
+    })
+
+    // 获取当前时间函数
+    function setDate() {
+        var myDate = new Date();
+        var year = myDate.getFullYear();
+        var month = myDate.getMonth() + 1;
+        var day = myDate.getDate();
+        var hour = myDate.getHours();
+        var minute = myDate.getMinutes();
+        var second = myDate.getSeconds();
+        var millSecond = myDate.getMilliseconds();
+        month = month <= 9 ? '0' + month : month
+        var setDate = year + "/" + month + "/" + day + " " + hour + ":" + minute + ":" + second + " " + millSecond
+        // 返回的为处理好的时间
+        return setDate;
+    }
+</script>
+
+</html>

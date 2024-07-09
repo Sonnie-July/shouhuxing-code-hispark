@@ -1,0 +1,36 @@
+body{
+    background-color: #f7f7f7;
+}
+.body h1 {
+    position: absolute;
+    top:30px;
+    left: 30px;
+    height: 80px;
+    font-size: xxx-large;
+    color:#0081c6;
+    border-bottom: 1px solid #ccc;
+}
+.body ul{
+    position: absolute;
+    top:150px;
+    left: 60px;
+}
+.body ul li{
+    list-style: disc;
+    font-size: 20px;
+}
+.body ul li ul{
+    position: absolute;
+    top:340px;
+    left: 50px;
+}
+.body ul li ul li{
+    list-style: circle;
+    font-size: 18px;
+}
+.body p{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    padding-right:50px;
+}

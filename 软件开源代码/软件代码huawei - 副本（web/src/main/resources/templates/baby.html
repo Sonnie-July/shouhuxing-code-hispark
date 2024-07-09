@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="bootstrap-3.4.1/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/login_index.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="stylesheet" href="css/baby.css">
+    <script src="jquery/jquery-3.5.1.js"></script>
+
+    <script src="bootstrap-3.4.1/js/bootstrap.js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<!-- 顶部导航 -->
+<div class="head">
+    <div class="logo">
+
+    </div>
+    <ul>
+        <li class="lagu">
+            <a href="#">简体中文</a>
+            <div class="language">
+                <a href="#" class="one">简体中文</a>
+                <a href="#" class="two">English</a>
+                <a href="#" class="two">Japanese</a>
+            </div>
+        </li>
+        <li><a href="#">消息</a></li>
+        <li><a href="#">支持与服务</a></li>
+        <li><a href="#">企业</a></li>
+        <li><a href="#">费用</a></li>
+    </ul>
+    <div class="user">
+        <img src="images/touxiang.jpg" alt="">
+    </div>
+
+</div>
+<!-- 左侧导航 -->
+<div class="left">
+    <ul>
+        <li>
+            <span class="iconfont icon-shouye"></span>
+            <a th:href="@{toLogin_IndexPage}">产品概况</a>
+        </li>
+        <li>
+            <span class="iconfont icon-dingwei"></span>
+            <a th:href="@{toCar_PositionPage}">车辆位置</a>
+        </li>
+        <li>
+            <span class="iconfont icon-xingji"></span>
+            <a th:href="@{toCar_DynamicPage}">车辆动态</a>
+        </li>
+        <li class="choice">
+            <span class="iconfont icon-yuer"></span>
+            <a th:href="@{toBabyPage}">宝贝动态</a>
+        </li>
+        <li>
+            <span class="iconfont icon-anquan"></span>
+            <a th:href="@{toSafePage}" class="securate">安全中心</a>
+            <!-- 之后再加上 -->
+            <!-- <div class="secura-frame">
+                <a href="#">管理员列表</a>
+                <a href="#">用户列表</a>
+            </div> -->
+        </li>
+        <li>
+            <span class="iconfont icon-dangan"></span>
+            <a th:href="@{toCondiserPage}">帮助文档</a>
+        </li>
+        <li>
+            <span class="iconfont icon-bianji"></span>
+            <a th:href="@{toFeedbackPage}">问题反馈</a>
+        </li>
+    </ul>
+</div>
+<div>
+    <div class="banner">
+        <ul class="imgList">
+            <li><img class="baby" src="images/baby4.jpg" alt=""></li>
+            <li><img class="baby" src="images/baby2.jpg" alt=""></li>
+            <li><img class="baby" src="images/baby3.jpg" alt=""></li>
+            <li><img class="baby" src="images/baby1.jpg" alt=""></li>
+        </ul>
+        <div class="circle">
+            <!-- <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>  -->
+        </div>
+    </div>
+    <div class="all-image-container">
+        <div class="image-container" id="image1">
+            <img src="images/baby5 (1).png" alt="" class="normal-brightness">
+            <div class="alert alert-info icon-baby" role="alert">宝宝醒了</div>
+        </div>
+        <div class="image-container" id="image2">
+            <img src="images/baby5 (2).png" alt="" class="dimmed">
+            <div class="alert alert-info icon-baby" role="alert">宝宝哭了</div>
+        </div>
+        <div class="image-container" id="image3">
+            <img src="images/baby5 (3).png" alt="" class="dimmed">
+            <div class="alert alert-info icon-baby" role="alert">宝宝睡着了</div>
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            var imgList = document.querySelector('.imgList');
+            var circle = document.querySelector('.circle');
+            var thisIndex = 0;
+            var imgListLi = imgList.children;
+            var circleA = circle.children;
+            var flag = true;
+            imgList.style.width = imgList.children.length * 620 + 'px';
+            for (var i = 0; i < imgList.children.length; i++) {
+                var aNode = document.createElement('a');
+                aNode.setAttribute('index', i);	//设置自定义属性
+                if (i == 0) {
+                    aNode.className = 'hover';
+                }
+                circle.appendChild(aNode);
+            }
+            circle.addEventListener('click', function (e) {
+                if (flag) {
+                    flag = false;
+                    // console.log(e.target);
+                    if (e.target.nodeName != 'A') {
+                        return false;
+                    }
+                    thisIndex = e.target.getAttribute('index');
+                    // imgList.style.left = -thisIndex * 620 + 'px';
+                    slow(imgList, -thisIndex * 620, function () {
+                        flag = true;
+                    });
+                    circleChange();
+                }
+            })
+            function antoChange() {
+                setInterval(function () {
+                    if (flag) {
+                        flag = false;
+                        if (thisIndex >= circleA.length) {
+                            thisIndex = 0;
+                        }
+                        slow(imgList, -thisIndex * 620, function () {
+                            flag = true;
+                        });
+                        circleChange();
+                        thisIndex++;
+                    }
+                }, 3000);
+            }
+            function circleChange() {
+                for (var i = 0; i < circleA.length; i++) {
+                    circleA[i].className = '';
+                }
+                circleA[thisIndex].className = 'hover';
+            }
+            function slow(obj, target, callback) {
+                obj.myInter = setInterval(function () {
+                    var offsetLeft = obj.offsetLeft;
+                    var num = (target - offsetLeft) / 10;
+                    num > 0 ? num = Math.ceil(num) : num = Math.floor(num);
+                    if (offsetLeft == target) {
+                        clearInterval(obj.myInter);
+                        callback && callback();
+                    } else {
+                        obj.style.left = offsetLeft + num + 'px';
+                    }
+                }, 10)
+            }
+            antoChange();
+        }
+        let currentIndex = 0; // 当前变化的图片索引
+        const images = document.querySelectorAll('.image-container img');
+
+        function changeBrightness() {
+            // 移除当前亮度的类
+            images[currentIndex].classList.remove('normal-brightness', 'dimmed');
+
+            // 更新当前图片索引
+            currentIndex = (currentIndex + 1) % images.length;
+
+            // 给下一个图片添加正常亮度类
+            images[currentIndex].classList.add('normal-brightness');
+
+            // 给当前图片和下一个图片添加半暗状态类
+            images[(currentIndex + 1) % images.length].classList.add('dimmed');
+        }
+
+        // 每秒调用一次changeBrightness函数
+        setInterval(changeBrightness, 1000);
+    </script>
+
+
+
+</div>
+
+
+</body>
+</html>

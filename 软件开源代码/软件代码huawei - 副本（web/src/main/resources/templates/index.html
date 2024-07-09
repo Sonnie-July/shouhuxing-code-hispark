@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能婴儿车，守护宝贝安全</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- 头标 -->
+    <div class="nav">
+        <!-- 最顶部导航 -->
+        <!--<div class="top">
+            <a href="#" class="one">智慧婴儿车APP</a>
+            <span><a href="#" class="two">中国站</a></span>
+        </div>-->
+        <!-- 顶部导航 -->
+        <!-- logo 后期添加 -->
+        <div class="logo"><img src="images/logo.png" alt=""></div>
+        <div class="header">
+            <ul>
+                <li><a href="#">最新活动</a></li>
+                <li><a href="#">产品</a></li>
+                <li><a href="#">解决方案</a></li>
+                <li><a href="#">定价</a></li>
+                <li><a href="#">合作伙伴</a></li>
+                <li><a href="#">支持与服务</a></li>
+            </ul>   
+        </div>
+        <!-- 搜索框 -->
+        <!--<div class="search">
+            <input type="text" placeholder="搜索">-->
+            <!-- 放大镜 -->
+            <!--<span></span>
+        </div>-->
+        <div class="last">
+            <ul>
+                <li><a th:href="@{toRegisterPage}">注册</a></li>
+                <li><a th:href="@{toLoginPage}">登录</a></li>
+                <li><a href="#">文档</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- body -->
+    <div class="body">
+        <div class="literal">
+            <h2>智能推行，舒心相伴</h2>
+            <p>智护星——宝宝成长的好伙伴</p>
+            <a href="#">了解更多</a>
+        </div>
+
+        <img src="images/back.jpg" alt="">
+    </div>
+
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="top">
+            <ul>
+                <li><a href="#"><span></span>免费试用</a></li>
+                <li><a href="#"><span></span>使用教程</a></li>
+                <li><a href="#"><span></span>产品优势</a></li>
+                <li><a href="#"><span></span>如何加盟</a></li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <ul>
+                <li><a href="#">产品服务</a></li>
+                <li><a href="#">用户指南</a></li>
+                <li><a href="#">产品简介</a></li>
+
+                <!-- 可以在此处放个图片 -->
+
+                <li><a href="#">附近网点</a></li>
+                <li><a href="#">问题反馈</a></li>
+                <li><a href="#">上门服务</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

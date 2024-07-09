@@ -1,0 +1,48 @@
+div ul li #switch {
+    position: relative;
+    left: 130px;
+    top: 10px;
+}
+
+input {
+    display: none;
+}
+div ul li span label {
+    display: block;
+    width: 130px;
+    height: 60px;
+    border-radius: 30px;
+    background: rgb(128,128,128);
+    border: 1px solid #eee;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+div ul li span label::before {
+    display: block;
+    content: '';
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .3s;
+}
+div ul li span label::after {
+    display: block;
+    content: '';
+    width: 0;
+    height: 100%;
+    background: #006BB0;
+    transition: all .3s;
+    border-radius: 10px;
+}
+div ul li span input:checked + label::before {
+    left: 70px;
+}
+div ul li span input:checked + label::after {
+    width: 100%;
+}
